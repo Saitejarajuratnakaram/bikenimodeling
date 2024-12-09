@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bikini-Bar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        /* Container for the background image */
+        .background-container1 {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('aboutbackground.jpg');
+            /* Add your image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for the cards (Mission, Vision, etc.) */
+        .mission-vision-container2 {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            /* Adjust width to fit the layout */
+        }
+
+        .mission,
+        .vision {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.455);
+            /* Transparent background */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            text-align: center;
+            transform-style: preserve-3d;
+            animation: rotateTilt 5s ease-in-out infinite;
+            margin: 0 10px;
+        }
+
+        .mission .h22,
+        .vision .h22 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .mission .p1,
+        .vision .p1 {
+            font-size: 16px;
+            color: #101010;
+        }
+
+        /* Animation keyframes */
+        @keyframes rotateTilt {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            25% {
+                transform: rotateY(360deg);
+            }
+
+            50% {
+                transform: rotateY(0deg) rotateZ(5deg);
+            }
+
+            75% {
+                transform: rotateY(0deg) rotateZ(-5deg);
+            }
+
+            100% {
+                transform: rotateY(0deg) rotateZ(0deg);
+            }
+        }
+
+        /* Stop animation on hover */
+        .mission:hover,
+        .vision:hover {
+            animation-play-state: paused;
+        }
+
+        .ethical-practices {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            /* background-color: white; */
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+            /* border-radius: 10px; */
+        }
+
+        .ethical-practices h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .ethical-practices p {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
+            margin-left: 30px;
+            /* margin-bottom: 10px; */
+        }
+
+        .ethical-guidelines {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .guideline h2 {
+            color: #444;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .guideline p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .video123{
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small> Madhapur, Hyderabad, Telangana 500081</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 67890</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.x.com/"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="BB.png" alt="Logo" class="img-fluid" style="height: 150px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="profile.html" class="nav-item nav-link">Profile</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User acccount </a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <a href="apply.html" class="dropdown-item">Model Application</a>
+                    </div>
+                </div>
+            </div>
+            <a href="book.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block ">Book A Model<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5" style="background-image: url(aboutbanner.jpg);">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="profile.html">Profile</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-info mb-0">01</h1>
+                    </div>
+                    <h5>Photographer</h5>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-check fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-info mb-0">02</h1>
+                    </div>
+                    <h5>Portfolio</h5>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-info mb-0">03</h1>
+                    </div>
+                    <h5>Photoshoots</h5>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-headphones fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-info mb-0">04</h1>
+                    </div>
+                    <h5>Client Support</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Start -->
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="abot1.jpg" style="object-fit: cover;"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">About Us</h1>
+                        </div>
+                        <p class="mb-4 pb-2">
+                            <b style="font-size: 25px;"> Bikini </b> is a two-piece swimsuit typically worn by women,
+                            consisting of two parts: a top and
+                            a bottom. <br> Bikinies are typically worn for beach outings, pool parties, or sunbathing,
+                            offering a balance of style and functionality for water activities and lounging. <br> Made
+                            from materials like nylon, spandex, or polyester, the fabric is stretchy, lightweight, and
+                            quick-drying. Many bikinis feature lining for added comfort and modesty. <br> Bikinis come
+                            in a wide variety of patterns, colors, and prints, from solid colors to florals, stripes, or
+                            tropical prints. <br>The level of coverage also varies, ranging from more modest styles like
+                            boyshorts or briefs to more revealing cuts like Brazilian or thong bottoms.
+                        </p>
+                        <div class="row g-4 mb-4 pb-2">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">2351</h2>
+                                        <p class="fw-medium mb-0">Happy Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">7890</h2>
+                                        <p class="fw-medium mb-0">Projects Done</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary py-3 px-5">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- our mission section -->
+
+    <!-- Background container with image -->
+    <section class="background-container1">
+        <div class="mission-vision-container2">
+            <div class="mission">
+                <h2 class="h22">Our Mission</h2>
+                <p class="p1">At Bikini Dress Matter, our mission is to empower women to feel confident, stylish, and
+                    comfortable in their own skin through our thoughtfully designed swimwear. We are committed to
+                    creating bikinis that celebrate diverse body.
+                </p>
+            </div>
+            <div class="vision">
+                <h2 class="h22">Our Vision</h2>
+                <p class="p1">Body Positivity: We believe that every body is a bikini body. Our designs cater to all
+                    shapes and sizes, promoting confidence and self-expression. <br>
+                    Sustainability: We are dedicated to eco-friendly practices by using sustainable materials.</p>
+            </div>
+            <div class="vision">
+                <h2 class="h22">Our History</h2>
+                <p class="p1">Bikini Dress Matter was founded in 2015 by a group of women passionate about swimwear and
+                    fashion. Noticing a gap in the market for high-quality, inclusive bikinis, they set out to create a
+                    brand that offered designs for all body.</p>
+            </div>
+        </div>
+    </section>
+    <!-- our mission end -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="" style="height: 300px;width: 300px;">
+                            <div class="team-social">
+                                <a class="btn btn-square" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Hema Sai</h5>
+                            <small>Manager</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="ourphot2.jpg" alt="" style="height: 300px;width: 300px;">
+                            <div class="team-social">
+                                <a class="btn btn-square" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Satya</h5>
+                            <small>Photographer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="ourphot3.jpg" alt="" style="height: 300px; width: 300px;">
+                            <div class="team-social">
+                                <a class="btn btn-square" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Pallavi</h5>
+                            <small>Designer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="ourphot4.jpg" alt="" style="height: 300px;width: 300px;">
+                            <div class="team-social">
+                                <a class="btn btn-square" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Subash</h5>
+                            <small>Photographer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- video section -->
+    <div>
+        <video class="video123" src="bikvedio.mp4"  autoplay muted ></video>
+    </div>
+    <!-- video section end -->
+
+    <section class="ethical-practices">
+        <h1>Our Ethical Practices</h1>
+        <p>We are committed to upholding the highest ethical standards across all aspects of our work. Our practices
+            ensure that we maintain the integrity, privacy, and consent of all individuals involved.</p>
+
+        <div class="ethical-guidelines">
+            <div class="guideline">
+                <h2>1. Consent</h2>
+                <p>We ensure that all participants provide informed consent before being involved in any of our
+                    activities. This includes the right to withdraw consent at any time without any repercussions.</p>
+            </div>
+
+            <div class="guideline">
+                <h2>2. Privacy</h2>
+                <p>We are dedicated to protecting the privacy of our users and participants. Any data collected is
+                    handled with strict confidentiality and used only for the purposes explicitly stated during consent.
+                </p>
+            </div>
+
+            <div class="guideline">
+                <h2>3. Transparency</h2>
+                <p>We provide clear and transparent information about how we collect, store, and use data. Participants
+                    are informed about the data usage policies and their rights regarding their personal information.
+                </p>
+            </div>
+
+            <div class="guideline">
+                <h2>4. Data Protection</h2>
+                <p>We employ advanced security measures to safeguard any personal information shared with us. We adhere
+                    to legal requirements and industry standards for data protection and privacy.</p>
+            </div>
+
+            <div class="guideline">
+                <h2>5. Ethical Conduct</h2>
+                <p>All our activities are conducted with integrity, fairness, and respect for the individuals and
+                    communities involved. We avoid any form of bias, discrimination, or exploitation in our processes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- chat start -->
+    <div class="chat-container1">
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 class="text-white"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</h3>
+                <button id="close-chat" aria-label="Close chat"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot-message" id="welcome-message">
+                    Welcome to Bikini Model!
+                </div>
+            </div>
+            <div class="chat-input" id="chat-input" style="display: none;">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i> </button>
+            </div>
+
+            <div class="start-conversation" id="start-conversation">
+                <button id="start-btn">Start Conversation</button>
+            </div>
+        </div>
+
+        <div class="chat-toggle" id="chat-toggle">
+            <button id="open-chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat </button>
+        </div>
+    </div>
+    <!-- chat end -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-image: url('footerbg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Madhapur, Hyderabad, Telangana 500081</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>bikinibar@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.x.com/"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Top Models</h4>
+                    <a class="btn btn-link" href="profile1.html">Jennifer Dorie</a>
+                    <a class="btn btn-link" href="profile2.html">Ashley Kaltwasser</a>
+                    <a class="btn btn-link" href="profile3.html">Sonia Isaza</a>
+                    <a class="btn btn-link" href="profile4.html">Tammy Hembrow</a>
+                    <a class="btn btn-link" href="profile5.html">Brooke Ence</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="profile.html">Profile</a>
+                    <a class="btn btn-link" href="book.html">Book A Model</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Bikini modeling showcases confidence and body positivity while highlighting stylish swimwear.
+                        It's about fitness, fashion, and empowering individuals to feel great in their own skin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
