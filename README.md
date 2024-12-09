@@ -37,7 +37,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/bikeni-modeling-website.git
+git clone   (https://github.com/Saitejarajuratnakaram/bikenimodeling)
 Navigate to the project folder:
 
 bash
