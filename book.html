@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bikini-Bar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('bikini.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cat {
+            width: 60%;
+            margin: 50px auto;
+            background-color: rgba(209, 140, 140, 0.71);
+            padding: 30px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="date"]:hover,
+        textarea:hover,
+        select:hover {
+            border-color: #007bff;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #f97272;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e86565;
+            transform: translateY(-3px);
+            color: black;
+        }
+
+        .calendar-section {
+            margin-top: 40px;
+        }
+
+        #availabilityCalendar {
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f97272;
+            color: white;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFCBA4;
+            padding: 30px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .popup h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .popup button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small> Madhapur, Hyderabad, Telangana 500081</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 67890</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.x.com/"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="BB.png" alt="Logo" class="img-fluid" style="height: 150px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="profile.html" class="nav-item nav-link">Profile</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User acccount </a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <a href="apply.html" class="dropdown-item">Model Application</a>
+                    </div>
+                </div>
+            </div>
+            <a href="book.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block ">Book A Model<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div class="cat">
+        <h1>Booking & Inquiry</h1>
+
+        <!-- Booking Form -->
+        <section class="form-section">
+            <h2>Book a Model</h2>
+            <form id="bookingForm">
+                <label for="model">Model Name:</label>
+                <select id="model" name="model" onchange="updateServices()" required>
+                    <option value="">Select a model</option>
+                    <option value="modelA">Jennifer Dorie</option>
+                    <option value="modelB">Ashley Kaltwasser</option>
+                    <option value="modelC">Sonia Isaza</option>
+                    <option value="modelD">Tammy Hembrow</option>
+                    <option value="modelE">Brooke Ence</option>
+                    <option value="modelF">Luciana de Souza Santos</option>
+                </select>
+
+                <label for="service">Service:</label>
+                <select id="service" name="service" onchange="updateRate()" required>
+                    <option value="">Select a service</option>
+                </select>
+
+                <label for="rate">Service Rate:</label>
+                <input type="text" id="rate" name="rate" readonly placeholder="Service Cost">
+
+                <label for="date">Shoot Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="requirements">Additional Requirements:</label>
+                <textarea id="requirements" name="requirements"
+                    placeholder="Enter any additional requirements (optional)"></textarea>
+            </form>
+        </section>
+
+        <!-- Inquiry Form -->
+        <section class="form-section">
+            <h2>Details:</h2>
+            <form id="inquiryForm" onsubmit="return validateForms()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                    onkeypress="return /^[a-zA-Z\s]*$/.test(event.key)">
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="inquiry">Inquiry:</label>
+                <textarea id="inquiry" name="inquiry" placeholder="Ask your question..." required></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+
+        <!-- Availability Calendar -->
+        <section class="calendar-section">
+            <h2>Model Availability</h2>
+            <div id="availabilityCalendar">
+                <table>
+                    <tr>
+                        <th>Model</th>
+                        <th>Available Dates</th>
+                    </tr>
+                    <tr>
+                        <td>Jennifer Dorie</td>
+                        <td>October 15 - October 20</td>
+                    </tr>
+                    <tr>
+                        <td>Ashley Kaltwasser</td>
+                        <td>October 25 - November 2</td>
+                    </tr>
+                    <tr>
+                        <td>Sonia Isaza</td>
+                        <td>November 5 - November 12</td>
+                    </tr>
+                    <tr>
+                        <td>Tammy Hembrow</td>
+                        <td>October 15 - October 20</td>
+                    </tr>
+                    <tr>
+                        <td>Brooke Ence</td>
+                        <td>October 25 - November 2</td>
+                    </tr>
+                    <tr>
+                        <td>Luciana de Souza Santos</td>
+                        <td>November 5 - November 12</td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Popup for successful submission -->
+    <div class="popup" id="popup">
+        <h2>Thank you for your inquiry/booking! We will reach out shortly.</h2>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+
+    <!-- chat start -->
+    <div class="chat-container1">
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 class="text-white"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</h3>
+                <button id="close-chat" aria-label="Close chat"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot-message" id="welcome-message">
+                    Welcome to Bikini Model!
+                </div>
+            </div>
+            <div class="chat-input" id="chat-input" style="display: none;">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i> </button>
+            </div>
+
+            <div class="start-conversation" id="start-conversation">
+                <button id="start-btn">Start Conversation</button>
+            </div>
+        </div>
+
+        <div class="chat-toggle" id="chat-toggle">
+            <button id="open-chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat</button>
+        </div>
+    </div>
+    <!-- chat end -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-image: url('footerbg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Madhapur, Hyderabad, Telangana 500081</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>bikinibar@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.x.com/"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Top Models</h4>
+                    <a class="btn btn-link" href="profile1.html">Jennifer Dorie</a>
+                    <a class="btn btn-link" href="profile2.html">Ashley Kaltwasser</a>
+                    <a class="btn btn-link" href="profile3.html">Sonia Isaza</a>
+                    <a class="btn btn-link" href="profile4.html">Tammy Hembrow</a>
+                    <a class="btn btn-link" href="profile5.html">Brooke Ence</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="profile.html">Profile</a>
+                    <a class="btn btn-link" href="book.html">Book A Model</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Bikini modeling showcases confidence and body positivity while highlighting stylish swimwear.
+                        It's about fitness, fashion, and empowering individuals to feel great in their own skin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // Model services and rates data
+        const modelServices = {
+            modelA: {
+                services: ["Photoshoot", "Commercial", "Runway", "Brand Promotion"],
+                rates: [500, 700, 1000, 900]
+            },
+            modelB: {
+                services: ["Photoshoot", "Fashion Show", "Ad Campaign", "Brand Promotion"],
+                rates: [450, 800, 1000, 2908]
+            },
+            modelC: {
+                services: ["Photoshoot", "Brand Promotion", "Ad Campaign"],
+                rates: [600, 1200, 1500]
+            },
+            modelD: {
+                services: ["Photoshoot", "Event Coverage", "Commercial"],
+                rates: [400, 850, 900]
+            },
+            modelE: {
+                services: ["Fashion Show", "Runway", "Brand Promotion"],
+                rates: [500, 750, 1100]
+            },
+            modelF: {
+                services: ["Photoshoot", "Music Video", "Commercial"],
+                rates: [600, 950, 1000]
+            }
+        };
+
+        function updateServices() {
+            const model = document.getElementById("model").value;
+            const serviceSelect = document.getElementById("service");
+            serviceSelect.innerHTML = `<option value="">Select a service</option>`;
+
+            if (model) {
+                modelServices[model].services.forEach((service, index) => {
+                    serviceSelect.innerHTML += `<option value="${service}" data-rate="${modelServices[model].rates[index]}">${service}</option>`;
+                });
+            }
+        }
+
+        function updateRate() {
+            const serviceSelect = document.getElementById("service");
+            const rateInput = document.getElementById("rate");
+            const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+            rateInput.value = selectedOption ? selectedOption.getAttribute("data-rate") : '';
+        }
+
+        function validateForms() {
+            const bookingForm = document.getElementById("bookingForm");
+            const inquiryForm = document.getElementById("inquiryForm");
+            let valid = true;
+
+            // Validate booking form
+            const bookingInputs = Array.from(bookingForm.elements).filter(input => input.tagName === "INPUT" || input.tagName === "TEXTAREA" || input.tagName === "SELECT");
+            bookingInputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    valid = false;
+                    input.classList.add("invalid");
+                } else {
+                    input.classList.remove("invalid");
+                }
+            });
+
+            // Validate inquiry form
+            const inquiryInputs = Array.from(inquiryForm.elements).filter(input => input.tagName === "INPUT" || input.tagName === "TEXTAREA");
+            inquiryInputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    valid = false;
+                    input.classList.add("invalid");
+                } else {
+                    input.classList.remove("invalid");
+                }
+            });
+
+            if (valid) {
+                // Submit both forms (simulate with a popup)
+                bookingForm.reset();
+                inquiryForm.reset();
+                showPopup();
+                return false; // Prevent default form submission
+            }
+            return false; // Prevent default form submission
+        }
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

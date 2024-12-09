@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bikini-Bar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        .services-overview {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+            margin: 50px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45%;
+            text-align: left;
+        }
+
+        .service-box h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .service-box p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .book-now-btn {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background-color: #ff1f3a;
+        }
+    </style>
+
+    <style>
+    .contact-section {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 50px;
+       background-color: #fff;
+       border-radius: 15px;
+       box-shadow: 0 4px 10px #f97272;
+       max-width: 1100px;
+       margin: 50px auto;
+    }
+
+    .contact-image img {
+       width: 400px;
+       border-radius: 10px;
+    }
+
+    .contact-info {
+       flex: 1;
+       padding-left: 50px;
+       color: #333;
+    }
+
+    .contact-info h2 {
+       font-size: 2.5rem;
+       margin-bottom: 20px;
+       color: #f97272;
+    }
+
+    .contact-info p {
+       font-size: 1.2rem;
+       line-height: 1.6;
+       margin-bottom: 15px;
+    }
+
+    .contact-info p span {
+       font-weight: bold;
+       color: #f97272;
+    }
+
+    .contact-info .contact-btn {
+       display: inline-block;
+       margin-top: 20px;
+       padding: 10px 20px;
+       background-color: #f97272;
+       color: #fff;
+       border: none;
+       border-radius: 5px;
+       font-size: 1rem;
+       text-decoration: none;
+       transition: background-color 0.3s ease;
+    }
+
+    .contact-info .contact-btn:hover {
+       background-color: #f97272;
+    }
+ </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small> Madhapur, Hyderabad, Telangana 500081</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 67890</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+             <img src="BB.png" alt="Logo" class="img-fluid" style="height: 150px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="profile.html" class="nav-item nav-link">Profile</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User acccount </a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <a href="apply.html" class="dropdown-item">Model Application</a>
+                    </div>
+                </div>
+            </div>
+            <a href="book.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block ">Book A Model<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+     <!-- chat start -->
+    <div class="chat-container1">
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 class="text-white"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</h3>
+                <button id="close-chat" aria-label="Close chat"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot-message" id="welcome-message">
+                    Welcome to Bikini Model!
+                </div>
+            </div>
+            <div class="chat-input" id="chat-input" style="display: none;">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i> </button>
+            </div>
+
+            <div class="start-conversation" id="start-conversation">
+                <button id="start-btn">Start Conversation</button>
+            </div>
+        </div>
+
+        <div class="chat-toggle" id="chat-toggle">
+            <button id="open-chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat</button>
+        </div>
+    </div>
+    <!-- chat end -->
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To <span class="text-primary">Bikini-Bar</span></h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Unstoppable in a bikini, unstoppable in life!</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Best Models Ever</p>
+                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="book.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book a Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To <span class="text-primary">Bikini-Bar</span></h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Own your curves, embrace your shine.</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Best Models Ever</p>
+                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="book.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book a Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="col-12 col-lg-8 text-center">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To <span class="text-primary">Bikini-Bar</span></h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">Step into your power, one pose at a time</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Best Models Ever</p>
+                            <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="book.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book a Model</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="abot1.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">About <span class="text-primary">Us</span></h1>
+                        </div>
+                        <p class="mb-4 pb-2">We are a leading bikini modeling agency, representing the most talented models across the industry. Our models bring elegance, confidence, and beauty to every project, from photo shoots to fashion shows. With a commitment to excellence, we help our clients showcase the best in swimwear and beachwear fashion.</p>
+                        <div class="row g-4 mb-4 pb-2">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">200</h2>
+                                        <p class="fw-medium mb-0">Professional Models</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">500</h2>
+                                        <p class="fw-medium mb-0">Successful Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-primary py-3 px-5">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Future <span class="text-primary">Models</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model24.webp" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Gigi Hadid</h4>
+                            <p>Believe in yourself and your ability to achieve greatness</p>
+                            <a class="fw-medium" href="profile24.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model18.webp" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Candice Swanepoel</h4>
+                            <p>Embrace the challenge and push your limits</p>
+                            <a class="fw-medium" href="profile18.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model17.jpeg" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Rosie huntington</h4>
+                            <p>Your body is a reflection of your hard work and dedication.</p>
+                            <a class="fw-medium" href="profile17.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model1.jpeg" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Jennifer Dorie</h4>
+                            <p>Your body is a reflection of your hard work and dedication</p>
+                            <a class="fw-medium" href="profile1.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model16.jpeg" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Miranda Kerr</h4>
+                            <p>Believe in yourself and your ability to achieve greatness</p>
+                            <a class="fw-medium" href="profile16.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="model30.jpeg" alt="" style="height: 400px;width: 100%;">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Jennifer Lopez</h4>
+                            <p>Your body is a reflection of your hard work and dedication.</p>
+                            <a class="fw-medium" href="profile30.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">Why Choose Our <span class="text-primary">Bikini Models</span> </h1>
+                        </div>
+                        <p class="mb-4 pb-2">Experience the elegance and beauty of bikini modeling with our professional services. We focus on enhancing your confidence and showcasing your unique style through stunning visuals and expert guidance.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Professional</p>
+                                        <h5 class="mb-0">Photographers</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-user-check fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Diverse</p>
+                                        <h5 class="mb-0">Portfolio</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Tailored</p>
+                                        <h5 class="mb-0">Photoshoots</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-headphones fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Personalized</p>
+                                        <h5 class="mb-0">Client Support</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="BB.png" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+ <!-- services start -->
+ <section class="services-overview" data-aos="fade-up">
+    <h1>Our <span class="text-primary">Services</span></h1>
+    <div class="service-container">
+        <!-- Model Bookings Section -->
+        <div class="service-box" data-aos="fade-right">
+            <img src="img/carousel-1.jpg" alt="Bikini Model Booking" class="service-image">
+            <h2>Bikini Model Bookings</h2>
+            <p>Book the most professional bikini models for your upcoming campaigns, events, and shows. Our models are available for fashion shows, magazine shoots, commercial shoots, and more.</p>
+            <a href="book.html"><button class="book-now-btn">Book Now</button></a>
+        </div>
+
+        <!-- Photo Shoot Section -->
+        <div class="service-box" data-aos="fade-left">
+            <img src="shoot.jpg" alt="Bikini Photo Shoot" class="service-image">
+            <h2>Professional Photo Shoots</h2>
+            <p>Get stunning bikini photo shoots with the best photographers in the industry. Whether it’s for a brand campaign, portfolio, or editorial, our team will provide top-notch services.</p>
+            <a href="shoot.html"><button class="book-now-btn">Schedule Shoot</button></a>
+        </div>
+    </div>
+</section>
+ <!-- services End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Testi<span class="text-primary">monial</span></h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
+                    <div class="testimonial-text text-center p-4">
+                        <p>Modeling bikinis has been a transformative experience for me. Not only has it boosted my confidence, but it has also allowed me to embrace my body and promote body positivity. Modal modal super modal hadal hadal gunde dadal modeliing it is to represent beauty in all shapes and sizes. Every shoot feels like a celebration of self-love!</p>
+                        <h5 class="mb-1">Manikanta</h5>
+                        <span class="fst-italic">Men Model</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
+                    <div class="testimonial-text text-center p-4">
+                        <p>As a bikini model, I've had the incredible opportunity to travel to beautiful locations and meet amazing people. Each shoot has challenged me creatively and professionally, pushing me to explore new styles and themes. The supportive environment in this industry has helped me grow not just as a model, but also as a person. I’m grateful for the friendships I've built along the way!</p>
+                        <h5 class="mb-1">Saiteja</h5>
+                        <span class="fst-italic">Managing Director</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
+                    <div class="testimonial-text text-center p-4">
+                        <p>Being a bikini model is about more than just the photos; it's about confidence, empowerment, and self-expression. I've learned to appreciate my body and its capabilities, and I love that I can inspire others to feel the same. The positive feedback I receive from fans and fellow models fuels my passion for this work, and I'm excited to continue my journey in the fashion world!</p>
+                        <h5 class="mb-1">Satya</h5>
+                        <span class="fst-italic">Camara  Man</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- call to action -->
+    <section class="contact-section" data-aos="fade-right">
+        <div class="contact-image" data-aos="zoom-in-left">
+           <img src="img/carousel-2.jpg" alt="Floral Design">
+        </div>
+        <div class="contact-info" data-aos="fade-left">
+           <h2>Contact Us</h2>
+           <p><span>Phone:</span> +123 456 7890</p>
+           <p><span>Email:</span> floraldesign@gmail.com</p>
+           <p><span>Location:</span>407,408, 27th Main Road,North East Avenue,Ayyappa Society,Madhapur,Hyderabad,
+              Telangana.</p>
+           <!-- Button -->
+           <a href="contact.html" class="contact-btn" data-aos="zoom-in">Get in Touch</a>
+        </div>
+     </section>
+    <!-- call to action end -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background-image: url('footerbg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;">
+   <div class="container py-5">
+       <div class="row g-5">
+           <div class="col-lg-3 col-md-6">
+               <h4 class="text-light mb-4">Address</h4>
+               <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Madhapur, Hyderabad, Telangana 500081</p>
+               <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+               <p class="mb-2"><i class="fa fa-envelope me-3"></i>bikinibar@gmail.com</p>
+               <div class="d-flex pt-2">
+                   <a class="btn btn-outline-light btn-social" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                   <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                   <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                   <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+           </div>
+           <div class="col-lg-3 col-md-6">
+               <h4 class="text-light mb-4">Top Models</h4>
+               <a class="btn btn-link" href="profile1.html">Jennifer Dorie</a>
+               <a class="btn btn-link" href="profile2.html">Ashley Kaltwasser</a>
+               <a class="btn btn-link" href="profile3.html">Sonia Isaza</a>
+               <a class="btn btn-link" href="profile4.html">Tammy Hembrow</a>
+               <a class="btn btn-link" href="profile5.html">Brooke Ence</a>
+           </div>
+           <div class="col-lg-3 col-md-6">
+               <h4 class="text-light mb-4">Quick Links</h4>
+               <a class="btn btn-link" href="index.html">Home</a>
+               <a class="btn btn-link" href="about.html">About Us</a>
+               <a class="btn btn-link" href="contact.html">Contact Us</a>
+               <a class="btn btn-link" href="profile.html">Profile</a>
+               <a class="btn btn-link" href="book.html">Book A Model</a>
+           </div>
+           <div class="col-lg-3 col-md-6">
+               <h4 class="text-light mb-4">Newsletter</h4>
+               <p>Bikini modeling showcases confidence and body positivity while highlighting stylish swimwear. It's about fitness, fashion, and empowering individuals to feel great in their own skin.</p>
+           </div>
+       </div>
+   </div>
+</div>
+
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration in milliseconds
+        });
+    </script>
+</body>
+
+</html>
