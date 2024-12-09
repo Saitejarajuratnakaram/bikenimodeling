@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bikini-Bar</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="icon">
+
+	<!-- Google Web Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+		rel="stylesheet">
+
+	<!-- Icon Font Stylesheet -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+	<!-- Libraries Stylesheet -->
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- profile styling -->
+	<!-- ------------ Font awesome CDN link ------------------ -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+	<!-- Template Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- profile styling -->
+
+	<link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+	<!-- Spinner Start -->
+	<div id="spinner"
+		class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+		<div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+	<!-- Spinner End -->
+
+
+	<!-- Topbar Start -->
+	<div class="container-fluid bg-light p-0">
+		<div class="row gx-0 d-none d-lg-flex">
+			<div class="col-lg-7 px-5 text-start">
+				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
+					<small class="fa fa-map-marker-alt text-primary me-2"></small>
+					<small> Madhapur, Hyderabad, Telangana 500081</small>
+				</div>
+				<div class="h-100 d-inline-flex align-items-center py-3">
+					<small class="far fa-clock text-primary me-2"></small>
+					<small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+				</div>
+			</div>
+			<div class="col-lg-5 px-5 text-end">
+				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
+					<small class="fa fa-phone-alt text-primary me-2"></small>
+					<small>+012 345 67890</small>
+				</div>
+				<div class="h-100 d-inline-flex align-items-center">
+					<a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/"><i
+							class="fab fa-facebook-f"></i></a>
+					<a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.x.com/"><i
+							class="fab fa-twitter"></i></a>
+					<a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com/"><i
+							class="fab fa-linkedin-in"></i></a>
+					<a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/"><i
+							class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Topbar End -->
+
+
+	<!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+		<a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+			<img src="BB.png" alt="Logo" class="img-fluid" style="height: 150px;">
+		</a>
+		<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="navbar-nav ms-auto p-4 p-lg-0">
+				<a href="index.html" class="nav-item nav-link">Home</a>
+				<a href="profile.html" class="nav-item nav-link active">Profile</a>
+				<a href="about.html" class="nav-item nav-link">About</a>
+				<a href="contact.html" class="nav-item nav-link">Contact</a>
+				<div class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User acccount </a>
+					<div class="dropdown-menu fade-up m-0">
+						<a href="login.html" class="dropdown-item">Login</a>
+						<a href="apply.html" class="dropdown-item">Model Application</a>
+					</div>
+				</div>
+			</div>
+			<a href="book.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block ">Book A Model<i
+					class="fa fa-arrow-right ms-3"></i></a>
+		</div>
+	</nav>
+	<!-- Navbar End -->
+	<!-- chat start -->
+	<div class="chat-container1">
+		<div class="chat-box">
+			<div class="chat-header">
+				<h3 class="text-white"><i class="fa fa-comments" aria-hidden="true"></i> Live Chat</h3>
+				<button id="close-chat" aria-label="Close chat"><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+			<div class="chat-body" id="chat-body">
+				<div class="message bot-message" id="welcome-message">
+					Welcome to Bikini Model!
+				</div>
+			</div>
+			<div class="chat-input" id="chat-input" style="display: none;">
+				<input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+				<button id="send-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
+			</div>
+
+			<div class="start-conversation" id="start-conversation">
+				<button id="start-btn">Start Conversation</button>
+			</div>
+		</div>
+
+		<div class="chat-toggle" id="chat-toggle">
+			<button id="open-chat"><i class="fa fa-comments" aria-hidden="true"></i> Chat with us</button>
+		</div>
+	</div>
+	<!-- chat end -->
+
+
+
+	<!-- model profile section start -->
+
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile1.html">
+				<img src="model1.jpeg" alt="Atul Prajapati">
+				<h2>Jennifer Dorie</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username1"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername1"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username1"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile2.html">
+				<img src="model2.webp" alt="Atul Prajapati">
+				<h2>Ashley Kaltwasser</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username2"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername2"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username2"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile3.html">
+				<img src="model3.jpeg" alt="Atul Prajapati">
+				<h2>Sonia Isaza</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username3"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername3"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username3"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile4.html">
+				<img src="model4.webp" alt="Atul Prajapati">
+				<h2>Tammy Hembrow</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile5.html">
+				<img src="model5.webp" alt="Atul Prajapati">
+				<h2>Brooke Ence</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile6.html">
+				<img src="model6.webp" alt="Atul Prajapati">
+				<h2>Luciana Souza</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile7.html">
+				<img src="model7.jpeg" alt="Atul Prajapati">
+				<h2>Heidi Somers</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile8.html">
+				<img src="model8.webp" alt="Atul Prajapati">
+				<h2>Angelica Teixeira</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile9.html">
+				<img src="model9.webp" alt="Atul Prajapati">
+				<h2>Lauren Simpson </h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile10.html">
+				<img src="model10.webp" alt="Atul Prajapati">
+				<h2>Whitney Johns</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile11.html">
+				<img src="model11.jpeg" alt="Atul Prajapati">
+				<h2>Adriana Lima</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile12.html">
+				<img src="model12.jpeg" alt="Atul Prajapati">
+				<h2>Gigi Hadid</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile13.html">
+				<img src="model13.jpeg" alt="Atul Prajapati">
+				<h2>Kendall Jenner</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile14.html">
+				<img src="model14.jpeg" alt="Atul Prajapati">
+				<h2>Bella Hadid</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile15.html">
+				<img src="model15.webp" alt="Atul Prajapati">
+				<h2>Emily Ratajkowski</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile16.html">
+				<img src="model16.jpeg" alt="Atul Prajapati">
+				<h2>Miranda Kerr</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile17.html">
+				<img src="model17.jpeg" alt="Atul Prajapati">
+				<h2>Rosie Huntington-Whiteley</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile18.html">
+				<img src="model18.webp" alt="Atul Prajapati">
+				<h2>Candice Swanepoel</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile19.html">
+				<img src="model19.jpeg" alt="Atul Prajapati">
+				<h2>Hailey Bieber</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile20.html">
+				<img src="model20.webp" alt="Atul Prajapati">
+				<h2>Bar Refaeli</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile21.html">
+				<img src="model21.jpeg" alt="Atul Prajapati">
+				<h2>Chrissy Teigen</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile22.html">
+				<img src="model22.webp" alt="Atul Prajapati">
+				<h2>Ashley Graham</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile23.html">
+				<img src="model23.webp" alt="Atul Prajapati">
+				<h2>Doutzen Kroes</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile24.html">
+				<img src="model24.webp" alt="Atul Prajapati">
+				<h2>Gigi Hadid</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile25.html">
+				<img src="model25.webp" alt="Atul Prajapati">
+				<h2>Sara Sampaio</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile26.html">
+				<img src="model26.webp" alt="Atul Prajapati">
+				<h2>Irina Shayk</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile27.html">
+				<img src="model27.webp" alt="Atul Prajapati">
+				<h2>Kate Upton</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile28.html">
+				<img src="model28.jpeg" alt="Atul Prajapati">
+				<h2>Nina Agdal</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile29.html">
+				<img src="model29.webp" alt="Atul Prajapati">
+				<h2>Alessandra Ambrosio</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile30.html">
+				<img src="model30.jpeg" alt="Atul Prajapati">
+				<h2>Jennifer Lopez</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile31.html">
+				<img src="model31.webp" alt="Atul Prajapati">
+				<h2>Karlie Kloss</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile32.html">
+				<img src="model32.jpeg" alt="Atul Prajapati">
+				<h2>Liu Wen</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile33.html">
+				<img src="model33.webp" alt="Atul Prajapati">
+				<h2>Ashley Benson</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile34.html">
+				<img src="model34.webp" alt="Atul Prajapati">
+				<h2>Bebe Rexha</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile35.html">
+				<img src="model35.webp" alt="Atul Prajapati">
+				<h2>Shanina Shaik</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile36.html">
+				<img src="model36.webp" alt="Atul Prajapati">
+				<h2>JValentina Sampaio</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile37.html">
+				<img src="model37.webp" alt="Atul Prajapati">
+				<h2>Romee Strijd</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile38.html">
+				<img src="model38.jpeg" alt="Atul Prajapati">
+				<h2>Devon Windsor</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile39.html">
+				<img src="model39.jpeg" alt="Atul Prajapati">
+				<h2>Josephine Skriver</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile40.html">
+				<img src="model40.jpeg" alt="Atul Prajapati">
+				<h2>Megan Fox</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile41.html">
+				<img src="model41.jpeg" alt="Atul Prajapati">
+				<h2>Jessica Hart</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile42.html">
+				<img src="model42.jpeg" alt="Atul Prajapati">
+				<h2>Sofia Vergara</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile43.html">
+				<img src="model43.jpeg" alt="Atul Prajapati">
+				<h2>Billie Lourd</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile44.html">
+				<img src="model44.jpeg" alt="Atul Prajapati">
+				<h2>Georgia Fowler</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile45.html">
+				<img src="model45.webp" alt="Atul Prajapati">
+				<h2>Stephanie Seymour</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile46.html">
+				<img src="model46.jpeg" alt="Atul Prajapati">
+				<h2>Emily Didonato</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile47.html">
+				<img src="model47.jpeg" alt="Atul Prajapati">
+				<h2>Cintia Dicker</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile48.html">
+				<img src="model48.jpeg" alt="Atul Prajapati">
+				<h2>Michelle Lewin</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile49.html">
+				<img src="model49.jpeg" alt="Atul Prajapati">
+				<h2>Anllela Sagra</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile50.html">
+				<img src="model50.webp" alt="Atul Prajapati">
+				<h2>Laura Hennigan</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile51.html">
+				<img src="model51.webp" alt="Atul Prajapati">
+				<h2>Tanya Mityushina</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile52.html">
+				<img src="model52.jpeg" alt="Atul Prajapati">
+				<h2>Winnie Harlow</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile53.html">
+				<img src="model53.webp" alt="Atul Prajapati">
+				<h2>Jodie Gasson</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile54.html">
+				<img src="model54.webp" alt="Atul Prajapati">
+				<h2>Tabria Majors</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile55.html">
+				<img src="model55.webp" alt="Atul Prajapati">
+				<h2>Rachael Finley</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile56.html">
+				<img src="model56.jpeg" alt="Atul Prajapati">
+				<h2>Denise Milani</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile57.html">
+				<img src="model57.webp" alt="Atul Prajapati">
+				<h2>Liziane Gutierr</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile58.html">
+				<img src="model58.webp" alt="Atul Prajapati">
+				<h2>Yara Khmidan</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile59.html">
+				<img src="model59.webp" alt="Atul Prajapati">
+				<h2>Ella Magers</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile60.html">
+				<img src="model60.jpeg" alt="Atul Prajapati">
+				<h2>Leanna Decker</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile61.html">
+				<img src="model61.webp" alt="Atul Prajapati">
+				<h2>Bella Ocean</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile62.html">
+				<img src="model62.webp" alt="Atul Prajapati">
+				<h2>Lily Coral</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile63.html">
+				<img src="model63.webp" alt="Atul Prajapati">
+				<h2>Maya Wave</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile64.html">
+				<img src="model64.webp" alt="Atul Prajapati">
+				<h2>Ava Shore</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile65.html">
+				<img src="model65.jpeg" alt="Atul Prajapati">
+				<h2>Isla Breeze</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile66.html">
+				<img src="model66.jpeg" alt="Atul Prajapati">
+				<h2>Zara Reef</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile67.html">
+				<img src="model67.jpeg" alt="Atul Prajapati">
+				<h2>Chloe Sunset</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile68.html">
+				<img src="model68.webp" alt="Atul Prajapati">
+				<h2>Luna Tide</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile69.html">
+				<img src="model69.webp" alt="Atul Prajapati">
+				<h2>Mia Sea</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile70.html">
+				<img src="model70.webp" alt="Atul Prajapati">
+				<h2>Jade Cove</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile71.html">
+				<img src="model71.webp" alt="Atul Prajapati">
+				<h2>Aria Sands</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile72.html">
+				<img src="model72.webp" alt="Atul Prajapati">
+				<h2>Nova Pearl</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile73.html">
+				<img src="model73.jpeg" alt="Atul Prajapati">
+				<h2>Stella Lagoon</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile74.html">
+				<img src="model74.webp" alt="Atul Prajapati">
+				<h2>Ruby Surf</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile75.html">
+				<img src="model75.webp" alt="Atul Prajapati">
+				<h2>Elle Marina</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile76.html">
+				<img src="model76.jpeg" alt="Atul Prajapati">
+				<h2>Sienna Bay</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile77.html">
+				<img src="model77.webp" alt="Atul Prajapati">
+				<h2>Tessa Coraline</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile78.html">
+				<img src="model78.webp" alt="Atul Prajapati">
+				<h2>Nia Marine</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile79.html">
+				<img src="model79.webp" alt="Atul Prajapati">
+				<h2>Skylar Aqua</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile80.html">
+				<img src="model80.webp" alt="Atul Prajapati">
+				<h2>Olivia Shoreline</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile81.html">
+				<img src="model81.jpeg" alt="Atul Prajapati">
+				<h2>Ivy Summer</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile82.html">
+				<img src="model82.jpeg" alt="Atul Prajapati">
+				<h2>Zoe Oceana</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile83.html">
+				<img src="model83.jpeg" alt="Atul Prajapati">
+				<h2>Lana Capri</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile84.html">
+				<img src="model84.jpeg" alt="Atul Prajapati">
+				<h2>Kayla Tide</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile85.html">
+				<img src="model85.jpeg" alt="Atul Prajapati">
+				<h2>Eden Coast</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile86.html">
+				<img src="model86.webp" alt="Atul Prajapati">
+				<h2>Hazel Sky</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile87.html">
+				<img src="model87.webp" alt="Atul Prajapati">
+				<h2>Mila Riviera</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile88.html">
+				<img src="model88.webp" alt="Atul Prajapati">
+				<h2>Poppy Bayou</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile89.html">
+				<img src="model89.jpeg" alt="Atul Prajapati">
+				<h2>Gia Harbor</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile90.html">
+				<img src="model90.webp" alt="Atul Prajapati">
+				<h2>Layla Azure</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile91.html">
+				<img src="model91.jpeg" alt="Atul Prajapati">
+				<h2>Kiara Sunset</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile92.html">
+				<img src="model92.webp" alt="Atul Prajapati">
+				<h2>Serena Isle</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile93.html">
+				<img src="model93.webp" alt="Atul Prajapati">
+				<h2>Jade Tropic</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile94.html">
+				<img src="model94.webp" alt="Atul Prajapati">
+				<h2>Elara Palm</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile95.html">
+				<img src="model95.jpeg" alt="Atul Prajapati">
+				<h2>Naomi Beach</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile96.html">
+				<img src="model96.webp" alt="Atul Prajapati">
+				<h2>Iris Oceanica</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile97.html">
+				<img src="model97.webp" alt="Atul Prajapati">
+				<h2>Dani Shore</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile98.html">
+				<img src="model98.webp" alt="Atul Prajapati">
+				<h2>Keira Wave</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile99.html">
+				<img src="model99.webp" alt="Atul Prajapati">
+				<h2>Talia Sands</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile100.html">
+				<img src="model100.jpeg" alt="Atul Prajapati">
+				<h2>Brooke Cove</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile101.html">
+				<img src="model101.webp" alt="Atul Prajapati">
+				<h2>Harper Shell</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile102.html">
+				<img src="model102.webp" alt="Atul Prajapati">
+				<h2>Sophie Tidepool</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile103.html">
+				<img src="model103.jpeg" alt="Atul Prajapati">
+				<h2>Aurora Seafoam</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile104.html">
+				<img src="model104.webp" alt="Atul Prajapati">
+				<h2>Vanessa Drift</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile105.html">
+				<img src="model105.webp" alt="Atul Prajapati">
+				<h2>Cara Waters</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile106.html">
+				<img src="model106.jpeg" alt="Atul Prajapati">
+				<h2>Siena Coral</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile107.html">
+				<img src="model107.jpeg" alt="Atul Prajapati">
+				<h2>Summer Breeze</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile108.html">
+				<img src="model108.webp" alt="Atul Prajapati">
+				<h2>Paige Lagoon</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile109.html">
+				<img src="model109.jpeg" alt="Atul Prajapati">
+				<h2>Amber Reef</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile110.html">
+				<img src="model10.webp" alt="Atul Prajapati">
+				<h2>Nina Oceania</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile111.html">
+				<img src="model111.webp" alt="Atul Prajapati">
+				<h2>Cora Shore</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile112.html">
+				<img src="model112.webp" alt="Atul Prajapati">
+				<h2>Leila Marine</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile113.html">
+				<img src="model113.jpeg" alt="Atul Prajapati">
+				<h2>Delilah Aqua</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile114.html">
+				<img src="model114.webp" alt="Atul Prajapati">
+				<h2>Giselle Bay</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile115.html">
+				<img src="model115.webp" alt="Atul Prajapati">
+				<h2>Hailey Breeze</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile116.html">
+				<img src="model116.jpeg" alt="Atul Prajapati">
+				<h2>Evie Sea</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile117.html">
+				<img src="model117.jpeg" alt="Atul Prajapati">
+				<h2>Wren Tides</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="image-area">
+		<div class="img-wrapper">
+			<a href="profile118.html">
+				<img src="model18.webp" alt="Atul Prajapati">
+				<h2>Zoe Clearwater</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username4"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername4"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username4"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile119.html">
+				<img src="model119.webp" alt="Atul Prajapati">
+				<h2>Esme Sun</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username5"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername5"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username5"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="img-wrapper">
+			<a href="profile120.html">
+				<img src="model120.webp" alt="Atul Prajapati">
+				<h2>Iris Sol</h2>
+			</a>
+			<ul>
+				<li><a href="https://www.instagram.com/username6"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.tiktok.com/@realusername6"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://www.facebook.com/username6"><i class="fab fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	</div>
+
+	<!-- Footer Start -->
+	<div class="container-fluid text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+		style="background-image: url('footerbg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;">
+		<div class="container py-5">
+			<div class="row g-5">
+				<div class="col-lg-3 col-md-6">
+					<h4 class="text-light mb-4">Address</h4>
+					<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Madhapur, Hyderabad, Telangana 500081</p>
+					<p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+					<p class="mb-2"><i class="fa fa-envelope me-3"></i>bikinibar@gmail.com</p>
+					<div class="d-flex pt-2">
+						<a class="btn btn-outline-light btn-social" href="https://www.x.com/"><i
+								class="fab fa-twitter"></i></a>
+						<a class="btn btn-outline-light btn-social" href="https://www.facebook.com/"><i
+								class="fab fa-facebook-f"></i></a>
+						<a class="btn btn-outline-light btn-social" href="https://www.youtube.com/"><i
+								class="fab fa-youtube"></i></a>
+						<a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/"><i
+								class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h4 class="text-light mb-4">Top Models</h4>
+					<a class="btn btn-link" href="profile1.html">Jennifer Dorie</a>
+					<a class="btn btn-link" href="profile2.html">Ashley Kaltwasser</a>
+					<a class="btn btn-link" href="profile3.html">Sonia Isaza</a>
+					<a class="btn btn-link" href="profile4.html">Tammy Hembrow</a>
+					<a class="btn btn-link" href="profile5.html">Brooke Ence</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h4 class="text-light mb-4">Quick Links</h4>
+					<a class="btn btn-link" href="index.html">Home</a>
+					<a class="btn btn-link" href="about.html">About Us</a>
+					<a class="btn btn-link" href="contact.html">Contact Us</a>
+					<a class="btn btn-link" href="profile.html">Profile</a>
+					<a class="btn btn-link" href="book.html">Book A Model</a>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h4 class="text-light mb-4">Newsletter</h4>
+					<p>Bikini modeling showcases confidence and body positivity while highlighting stylish swimwear.
+						It's about fitness, fashion, and empowering individuals to feel great in their own skin.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer End -->
+
+
+
+
+	<!-- JavaScript Libraries -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/waypoints/waypoints.min.js"></script>
+	<script src="lib/counterup/counterup.min.js"></script>
+	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+	<!-- Template Javascript -->
+	<script src="js/main.js"></script>
+	<script src="scripts.js"></script>
+</body>
+
+</html>
